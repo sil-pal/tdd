@@ -87,4 +87,48 @@ public class FunctionesTests
         var resultado = funciones.EsPalindrome(dato1);
         Assert.IsTrue(resultado);
     }
+    [Test]
+    public void CalcularnumeroMayor01()
+    {
+        var funciones = new Funciones();
+        var dato = new int [] {2,7,9,3,4};
+        var resultado = funciones.CalCularnumeroMayor(dato);
+        Assert.AreEqual(9,resultado);
+    }
+
+    [Test]
+    public void CalcularnumeroMayor02()
+    {
+        var funciones = new Funciones();
+        var dato = new int[] { 8, 5, 4, 3, 2 };
+        var resultado = funciones.CalCularnumeroMayor(dato);
+        Assert.AreEqual(8, resultado);
+    }
+    [Test]
+    public void CalcularnumeroMayor03()
+    {
+        var funciones = new Funciones();
+        var dato = new int[] { 10, 3, 6, 1, 5 };
+        var resultado = funciones.CalCularnumeroMayor(dato);
+        Assert.AreEqual(10, resultado);
+    }
+    [Test]
+    public void CalcularnumeroMayor04()
+    {
+        var funciones = new Funciones();
+        var dato = new int[] { 15, 14, 13, 12 };
+        var resultado = funciones.CalCularnumeroMayor(dato);
+        Assert.AreEqual(15, resultado);
+    }
+
+
+    [Test]
+    public void CalcularnumeroMayor05()
+    {
+        var funciones = new Funciones();
+        var dato = new int[] { 20, 19 };
+        var resultado = funciones.CalCularnumeroMayor(dato);
+        Assert.AreEqual(20, resultado);
+    }
+
 }

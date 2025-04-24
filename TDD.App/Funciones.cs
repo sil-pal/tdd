@@ -14,5 +14,11 @@ public class Funciones
         reverse = reverse.Replace(" ", "");
         return reverse.ToLower().Equals(text.ToLower());
     }
-    
+     
+    public int CalCularnumeroMayor(int[] numeros)
+    {
+        return numeros.OrderByDescending(x => x).ToList()[0];
+
+
+    }
 }
