@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace TDD.App;
 
 public class Funciones
@@ -20,5 +22,17 @@ public class Funciones
         return numeros.OrderByDescending(x => x).ToList()[0];
 
 
+    }
+
+    public bool EsContrasenaValida(string password)
+    {
+        if (password.Length < 8)
+            return false;
+
+        bool tieneMayuscula = Regex.IsMatch(password, "[A-Z]");
+        bool tieneNumero = Regex.IsMatch(password, "[0-9]");
+        bool tieneSimbolo = Regex.IsMatch(password, "[^a-zA-Z0-9]");
+
+        return tieneMayuscula && tieneNumero && tieneSimbolo;
     }
 }

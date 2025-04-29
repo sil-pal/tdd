@@ -131,4 +131,52 @@ public class FunctionesTests
         Assert.AreEqual(20, resultado);
     }
 
+    [Test]
+    public void Contrasenavalida01()
+    {
+        var funciones = new Funciones();
+        var dato = "S457@%_5";
+        var resultado = funciones.EsContrasenaValida(dato);
+        Assert.IsTrue(resultado);
+    }
+
+    [Test]
+    public void Contrasenavalida02()
+    {
+        var funciones = new Funciones();
+        var dato = "Bo_l68@m";
+        var resultado = funciones.EsContrasenaValida(dato);
+        Assert.IsTrue(resultado);
+    }
+
+
+
+    [Test]
+    public void Contrasenavalida03()
+    {
+        var funciones = new Funciones();
+        var dato = "Jt_@47y$%";
+        var resultado = funciones.EsContrasenaValida(dato);
+        Assert.IsTrue(resultado);
+    }
+
+    [Test]
+    public void Contrasenavalida04()
+    {
+        var funciones = new Funciones();
+        var dato = "A_ju/6";
+        var resultado = funciones.EsContrasenaValida(dato);
+        Assert.IsFalse(resultado);
+    }
+
+    [Test]
+    public void Contrasenavalida05()
+    {
+        var funciones = new Funciones();
+        var dato = "A24_k/()%";
+        var resultado = funciones.EsContrasenaValida(dato);
+        Assert.IsTrue(resultado);
+    }
+
+
 }
